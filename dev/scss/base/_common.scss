@@ -1,0 +1,28 @@
+html {
+    font-size: 62.5%;
+}
+
+.small-title {
+    font-weight: 700;
+    font-size: 1.4rem ;
+    line-height: 1.14;
+    text-transform: uppercase;
+    &_mb {
+        margin-bottom: 2.2rem;
+    }
+}
+
+
+.btn {
+    background: $btn-gradient;
+    font-weight: 900;
+    font-size: 2rem;
+    border: none;
+    text-transform: uppercase;
+    line-height: 1.15;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 0.9rem;
+}

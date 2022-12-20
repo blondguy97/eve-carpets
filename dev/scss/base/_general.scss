@@ -1,0 +1,434 @@
+.wrapper {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.14;
+}
+
+[class*="__container"] {
+    max-width: 123rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+// header
+
+.header {
+    background: linear-gradient(269.91deg, rgba(46, 49, 146, 0.7) 0%, rgba(212, 20, 90, 0.7) 98.16%);
+    padding: 2.5rem 1.5rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 0.66;
+    margin-bottom: 5.4rem;
+    color: #ffffff;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__phones {
+        display: flex;
+        margin-right: 17rem;
+        position: relative;
+        padding-left: 30px;
+    }
+    &__phones::before {
+        background-image: url("../../img/icons/phone.svg");
+        height: 20px;
+        width: 20px;
+        @include beforePosition;
+    }
+    &__town {
+        position: relative;
+        padding-left: 23px;
+    }
+    &__town::before {
+        @include beforePosition;
+        background-image: url("../../img/icons/marker.svg");
+        width: 15px;
+        height: 25px;
+    }
+    &__tel:not(:last-child) {
+        margin-right: 1rem;
+    }
+    &__page {
+        margin-left: auto;
+        padding-left: 45px;
+        position: relative;
+    }
+    &__page::before {
+        @include beforePosition;
+        background-image: url("../../img/icons/insta.svg");
+        width: 30px;
+        height: 30px;
+    }
+}
+
+// promo
+
+.promo {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 300;
+        font-size: 1.9rem;
+        line-height: 2rem;
+        color: #737373;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item + &__item {
+        margin-left: 2.5rem;
+    }
+
+    &__content {
+        background: url("../../img/promo-background.svg") center left/contain no-repeat;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4.5rem 0 7rem;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 5rem;
+        line-height: 6rem;
+        max-width: 67rem;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 2.4rem;
+        line-height: 1.16;
+        margin-bottom: 1.5rem;
+    }
+
+    &__btn {
+        padding: 1.5rem 4rem;
+    }
+    &__img {
+        padding-right: 16rem;
+    }
+}
+
+.cards {
+    color: #000;
+    text-align: center;
+    position: relative;
+    padding: 7rem 0 21.4rem;
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url("../../img/cards/cards-bg.svg");
+        width: 75rem;
+        height: 66rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+    &__title {
+        font-weight: 400;
+        font-size: 5rem;
+        line-height: 1.18;
+        margin-bottom: 12rem;
+        span {
+            background: linear-gradient(180deg, #b90160 0%, #3d5bf5 100%);
+            background-clip: text;
+            color: transparent;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-around;
+    }
+    &__bg {
+        top: 15rem;
+        left: -3rem;
+        z-index: -1;
+        position: absolute;
+    }
+}
+
+.card {
+    max-width: 34rem;
+    background: #ffffff;
+    box-shadow: 0px 0px 40px rgba(184, 0, 95, 0.2);
+    border-radius: 9px;
+    text-align: left;
+    &__img {
+        width: 100%;
+        height: 24rem;
+        object-fit: cover;
+        object-position: top;
+        border-top-left-radius: 9px;
+        border-top-right-radius: 9px;
+    }
+
+    &__content {
+        padding: 2rem 2.5rem;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 3.6rem;
+        text-transform: uppercase;
+        line-height: 1.16;
+        margin-bottom: 0.5rem;
+    }
+    &__text {
+        color: $dark-gray;
+        font-size: 1.5rem;
+    }
+}
+
+.slider {
+    padding: 15rem 0 7rem;
+    background: linear-gradient(94.31deg, rgba(212, 20, 90, 0.25) 0.96%, rgba(46, 49, 146, 0.25) 104.83%);
+    &__item {
+        background-color: #fff;
+        width: 53.6rem;
+        position: relative;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 9px;
+        cursor: pointer;
+        text-align: center;
+        padding: 6.3rem 1.5rem 2rem;
+    }
+
+    &__img {
+        position: absolute;
+        top: -65px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        line-height: 1.16;
+        position: relative;
+        max-width: 44.5rem;
+        margin: 0 auto 1rem;
+        padding-bottom: 2.1rem;
+    }
+
+    &__text::after {
+        content: "";
+        display: block;
+        width: 13rem;
+        position: absolute;
+        height: 2px;
+        background: $btn-gradient;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+
+    &__name {
+    }
+}
+
+.slick-list {
+    overflow: visible !important;
+    margin: 0 -35px;
+}
+
+.slick-slide {
+    max-width: 53.6rem;
+    opacity: 0.4;
+    transition: 0.4s all;
+    margin: 0 35px;
+    transform: scale(0.9);
+}
+
+.slick-slide.slick-center {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.footer {
+    padding: 16rem 0 8rem;
+    position: relative;
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+    &__item {
+        max-width: 22.4rem;
+    }
+    &__hexagon-small {
+        position: absolute;
+        top: 6.6rem;
+        left: 7rem;
+    }
+    &__hexagon-big {
+        position: absolute;
+        top: 0;
+        right: 11.6rem;
+    }
+
+    &__socials {
+    }
+
+    &__phones {
+    }
+
+    &__about {
+    }
+}
+.socials-footer {
+    &__link {
+        display: inline-block;
+        font-size: 1.4rem;
+        line-height: 0.714;
+    }
+    &__link:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    &__img {
+    }
+}
+
+.phones-footer {
+    &__title {
+    }
+
+    &__wrapper {
+    }
+
+    &__link {
+        display: inline-block;
+    }
+}
+.about-footer {
+    &__title {
+    }
+
+    &__text {
+        margin-bottom: 1.5rem;
+    }
+
+    &__link {
+    }
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    display: none;
+    text-align: center;
+    overflow-x: hidden;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    width: 90%;
+    min-height: 39rem;
+    padding: 4.5rem 30rem;
+    box-shadow: 0px 0px 35px rgba(212, 20, 90, 0.25);
+    border-radius: 15px;
+    &::before,
+    &::after {
+        content: "";
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        z-index: -1;
+        position: absolute;
+    }
+    &::before {
+        background-image: url("../../img/modal/decor-1.svg");
+        width: 311px;
+        height: 305px;
+        bottom: 0;
+        left: 0;
+    }
+    &::after {
+        background-image: url("../../img/modal/decor-2.svg");
+        width: 345px;
+        height: 215px;
+        top: 0;
+        right: 0;
+    }
+    &__close {
+        position: absolute;
+        top: 1rem;
+        right: 3rem;
+        line-height: 0.6;
+        cursor: pointer;
+        font-size: 5rem;
+        background: linear-gradient(180deg, #b90160 0%, #3d5bf5 100%);
+        background-clip: text;
+        color: transparent;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 4.5rem;
+    }
+
+    &__form {
+    }
+}
+.modal-form {
+    justify-content: center;
+    &__line {
+        display: flex;
+        margin-bottom: 1.7rem;
+    }
+    &__input:not(:last-child) {
+        margin-right: 2.5rem;
+    }
+    &__input,
+    &__textarea {
+        background-color: #ffffff;
+        border: 1px solid #a2a2a2;
+        border-radius: 9px;
+        overflow: hidden;
+        font-size: 2rem;
+    }
+
+    &__input {
+        padding: 1.2rem 2rem;
+        max-width: 36rem;
+        width: 100%;
+    }
+
+    &__textarea {
+        width: 100%;
+        padding: 1rem 2rem;
+        margin-bottom: 4rem;
+    }
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        padding: 1rem 3.5rem;
+    }
+}
